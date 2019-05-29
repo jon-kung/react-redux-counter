@@ -11,6 +11,9 @@ import { connect } from 'react-redux';
             <span>{this.props.count}</span>
             <button onClick={this.props.increment}> + </button>
           </div>
+          <div>
+            <button onClick={this.props.reset}> Reset </button>
+          </div>
         </div>
       );
     }
@@ -27,7 +30,8 @@ import { connect } from 'react-redux';
   function mapDispatchToProps(dispatch){
     return {
       increment : () => dispatch({type: 'INCREMENT'}),
-      decrement : () => dispatch({type: 'DECREMENT'})
+      decrement : () => dispatch({type: 'DECREMENT'}),
+      reset: () => dispatch ({type: 'RESET'})
     } 
   }
 
